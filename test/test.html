@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script type="text/javascript" src="../ttcformvalid.js"></script>
+		<script type="text/javascript" src="test.js"></script>
+		<title>Testing TTCFormValid</title>
+	</head>
+	<body>
+		<h1>Testing TTCFormValid</h1>
+		<!-- TODO: These test do not test what the labels say... 
+			Make some meaningful tests -->
+		<div id="ispis"></div>
+		<form name="form" method="post" action="#" onsubmit="return validate(this.name)">
+			<label for="firstname">First Name</label><input type="text" name="firstname" /><br>
+			<label for="lastname">Last Name</label><input type="text" name="lastname" /><br>
+			<label for="password">Password</label><input type="text" name="password" /><br>
+			<label for="passconf">Confirm Password</label><input type="text" name="passconf" /><br>
+			<label for="email">Email</label><input type="text" name="email" /><br>
+			<input type="submit" value="Send" />
+		</form>
+	</body>
+</html>

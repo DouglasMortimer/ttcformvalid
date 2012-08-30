@@ -1,0 +1,17 @@
+This is a form validator that uses CodeIgniter rule strings to do the form
+validation. It is suppose to lower the number of server calls by validating
+forms on the client side before submitting the data to the server.
+
+**********
+IMPORTANT:
+	This should not replace the CodeIgniter php form validation! Remember
+	JavaScript is easily manipulated, so by removing the php validation you put
+	your CI application at risk. So use this form validator along with CI form
+	validator.
+**********
+
+Still a work in progress...
+TODO:
+	* add the rest of the CI rules
+	* move rule tests to separate functions
+	* implement a callback function
