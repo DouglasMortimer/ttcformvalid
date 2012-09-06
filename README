@@ -12,6 +12,7 @@ IMPORTANT:
 
 Still a work in progress...
 TODO:
-	* add the rest of the CI rules
-	* move rule tests to separate functions
-	* implement a callback function
+	* add the rest of the CI rules (is_unique, valid_emails, xss_clean, prep_for_form, prep_url, strip_image_tags)
+	* separate prepping functions
+	* move rule tests to separate functions [DONE]
+	* implement a callback function [DONE]
