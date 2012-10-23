@@ -12,7 +12,7 @@ IMPORTANT:
 
 Still a work in progress...
 TODO:
-	* add the rest of the CI rules (is_unique, valid_emails, xss_clean, prep_for_form, prep_url, strip_image_tags)
+	* add the rest of the CI rules (is_unique, xss_clean, prep_for_form, prep_url, strip_image_tags)
 	* separate prepping functions
 	* move rule tests to separate functions [DONE]
 	* implement a callback function [DONE]

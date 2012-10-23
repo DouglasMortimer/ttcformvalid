@@ -20,9 +20,13 @@ function Validator(form_name, callback) {
 		passed = false;
 	}
 	
-	/*	TODO: Create check_email so it can be used by both
-	*	the valid_email function and the valid_emails function
-	*/
+	function check_email(email) {
+		var pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z.]{2,4}$/;
+		if (!pattern.test(email)) {
+			return false;
+		}
+		return true;
+	}
 	
 	//-----------------------------
 	//	Prepping functions
@@ -166,14 +170,20 @@ function Validator(form_name, callback) {
 	}
 	
 	function valid_email(rule) {
-		var pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z.]{2,4}$/;
-		if (!pattern.test(form[rule.field].value)) {
+		if (!check_email(form[rule.field].value)) {
 			failed(rule);
 		}
 	}
 	
 	function valid_emails(rule) {
-		//	TODO: separate emails (comma separated) and check them
+		var e_string = form[rule.field].value;
+		var emails = e_string.split(",");
+		for (var i = 0; i < emails.length; i++) {
+			if (!check_email(trim(emails[i]))) {
+				failed(rule);
+				return;
+			}
+		}
 	}
 	
 	function valid_ip(rule) {
